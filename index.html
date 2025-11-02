@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Seva Junction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+      .hero-section {
+    background: linear-gradient(120deg, #007bff 60%, #00c6a7 100%);
+    color: #fff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+.hero-section .text-accent {
+    color: #00c6a7;
+    font-weight: 700;
+}
+.hero-animated-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    min-height: 2.5rem;
+}
+.hero-btn {
+    font-size: 1.1rem;
+    padding: 0.85rem 2.2rem;
+    border-radius: 30px;
+    background: linear-gradient(90deg,#00c6a7,#007bff);
+    color: #fff;
+    border: none;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(0,198,167,0.18);
+}
+.hero-btn:hover, .hero-btn:focus {
+    background: linear-gradient(90deg,#007bff,#00c6a7);
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+}
+.hero-wave {
+    pointer-events: none;
+    z-index: 0;
+}
+        .service-card {
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,123,255,0.15);
+        }
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .service-card:hover .service-icon {
+            color: #00c6a7;
+            transform: scale(1.2) rotate(-8deg);
+        }
+        .service-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        .service-list li {
+            margin-bottom: 0.5rem;
+        }
+        .service-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 12px;
+            padding: 0.25rem 0.5rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .service-link:hover {
+            background: #e3f7f3;
+            color: #00c6a7;
+            box-shadow: 0 2px 8px rgba(0,198,167,0.08);
+            text-decoration: none;
+        }
+        .why-section {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .why-icon {
+            font-size: 2rem;
+            color: #00c6a7;
+        }
+        .testimonial-card {
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            background: #fff;
+        }
+        .footer-glass {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            backdrop-filter: blur(10px); /* Apply a blur effect */
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg,#00c6a7,#007bff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .footer-logo {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer-links {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer-links a {
+            color: #007bff;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #00c6a7;
+        }
+        .footer-contact {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer-contact a {
+            color: #007bff;
+            transition: color 0.2s;
+        }
+        .footer-contact a:hover {
+            color: #00c6a7;
+        }
+        .footer-social-icon {
+            font-size: 1.2rem;
+            color: #007bff;
+            transition: color 0.2s;
+        }
+        .footer-social-icon:hover {
+            color: #00c6a7;
+        }
+        .copyright-text {
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const phrases = [
+                "Transforming complex processes into simple solutions.",
+                "Your one-stop digital service center.",
+                "Trusted by thousands across India."
+            ];
+            let i = 0, j = 0, current = '', isDeleting = false, el = document.getElementById('hero-typing');
+            function type() {
+                if (!el) return;
+                if (!isDeleting && j <= phrases[i].length) {
+                    current = phrases[i].substring(0, j++);
+                    el.innerHTML = current + '<span style="opacity:0.5;">|</span>';
+                    setTimeout(type, 60);
+                } else if (isDeleting && j > 0) {
+                    current = phrases[i].substring(0, --j);
+                    el.innerHTML = current + '<span style="opacity:0.5;">|</span>';
+                    setTimeout(type, 35);
+                } else {
+                    isDeleting = !isDeleting;
+                    if (!isDeleting) i = (i + 1) % phrases.length;
+                    setTimeout(type, isDeleting ? 1000 : 1200);
+                }
+            }
+            type();
+        });
+        </script>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+    <div class="container-fluid">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+           <img src="assests/images/logo.png" alt="Smart Seva Junction Logo" class="logo-image" style="height:80px; width:auto;">
+            <div class="brand-text">
+                <span class="brand-title">Monu Net Service</span>
+                <small class="brand-subtitle">Complete Net Solutions</small>
+            </div>
+        </a>
+
+        <!-- Toggler for Offcanvas (visible on mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Desktop Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <form class="d-flex" id="permanent-search-form">
+                        <input class="form-control" type="search" placeholder="Search services...">
+                    </form>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a href="#" class="nav-icon-btn">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a href="#" class="btn btn-primary-custom">Sign In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Offcanvas Menu for Mobile -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item mt-3">
+                <form class="d-flex">
+                    <input class="form-control" type="search" placeholder="Search services...">
+                </form>
+            </li>
+            <li class="nav-item mt-3">
+                <a href="#" class="btn btn-primary-custom w-100">Sign In</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+   <!-- Hero Slider Section -->
+<section class="hero-slider">
+  <div class="swiper-container hero-swiper">
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/01.png')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">Commercial & Residential Pigeon Net</h1>
+          <p class="hero-subtitle">Professional Netting services</p>
+          <a href="#services" class="btn btn-primary-hero">Explore Services</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/02.webp')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">Essential Services, Simplified</h1>
+          <p class="hero-subtitle">From PAN cards to driving licenses, get all your essential documents processed quickly.</p>
+          <a href="#services" class="btn btn-primary-hero">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/03.webp')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">24/7 Expert Support</h1>
+          <p class="hero-subtitle">Our dedicated team is available around the clock to assist you with any queries.</p>
+          <a href="contact.html" class="btn btn-primary-hero">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/04.jpeg')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">Expert Installation Services</h1>
+          <p class="hero-subtitle">Professional team ensuring safety and quality in every project.</p>
+          <a href="#services" class="btn btn-primary-hero">Know More</a>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/05.jpeg')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">Affordable Net Solutions</h1>
+          <p class="hero-subtitle">High-quality pigeon and safety nets at competitive prices.</p>
+          <a href="#services" class="btn btn-primary-hero">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/10.jpeg')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">Balcony Safety Experts</h1>
+          <p class="hero-subtitle">Protect your family and pets with secure balcony nets.</p>
+          <a href="#services" class="btn btn-primary-hero">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="swiper-slide" style="background-image:url('assests/images/12.png')">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content text-center">
+          <h1 class="hero-title">Trusted Net Service Provider</h1>
+          <p class="hero-subtitle">Serving homes, societies, and industries with excellence.</p>
+          <a href="contact.html" class="btn btn-primary-hero">Contact Us</a>
+        </div>
+      </div>
+
+    </div> <!-- ✅ swiper-wrapper ends here -->
+
+    <!-- Swiper Controls -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<br>
+
+
+<section class="appointment-section">
+  <div class="appointment-container">
+    <h2>Get Free Appointment</h2>
+    <form class="appointment-form">
+      <input type="text" placeholder="Your Name *" required>
+      <input type="tel" placeholder="Your Phone Number *" required>
+      <select required>
+        <option value="">Select Service *</option>
+        <option value="bird-netting">Bird Netting</option>
+        <option value="spike-installation">Bird Spike Installation</option>
+        <option value="balcony-safety">Balcony Safety Net</option>
+        <option value="industrial-netting">Industrial Netting</option>
+      </select>
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .appointment-section {
+  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.appointment-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000851;
+  margin-bottom: 30px;
+}
+
+.appointment-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.appointment-form input,
+.appointment-form select {
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+  outline: none;
+  border-color: #1CB5E0;
+  box-shadow: 0 0 8px rgba(28, 181, 224, 0.3);
+}
+
+.appointment-form button {
+  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 14px 0;
+}
+
+.appointment-form button:hover {
+  background: linear-gradient(90deg, #000851 0%, #1CB5E0 100%);
+  transform: translateY(-2px);
+}
+
+</style>
+
+
+
+       <!-- Services Categories -->
+      <section id="projects" class="project-section py-5">
+  <div class="container">
+
+     <!-- Section Heading -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Our Comprehensive Service Categories</h2>
+      <!-- <div class="section-underline"></div> -->
+      <p class="section-subtitle" style="color: #ffffff;">
+        Explore a wide range of net installation and maintenance services designed 
+        to meet all your residential, commercial, and industrial needs under one roof.
+      </p>
+    </div>
+    <div class="row g-4">
+      
+      <!-- Project Card 1 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assests/images/02.webp" alt="Project Image">
+          <div class="project-content">
+            <h4>Chester Road Hostel</h4>
+            <p>
+              Welcome to the project page for the <strong>Chester Road Hostel</strong> project, 
+              which is being built by Morgan Sindall Construction. Here you can read about 
+              the project and its positive effect on the community.
+            </p>
+            <a href="#" class="read-more-btn">
+              Read More <i class="fas fa-arrow-rotate-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate for more cards -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assests/images/03.webp" alt="Project Image">
+          <div class="project-content">
+            <h4>Balcony Net Installation</h4>
+            <p>
+              Professional balcony safety nets that combine durability and aesthetics, 
+              ensuring protection for families and pets.
+            </p>
+            <a href="#" class="read-more-btn">
+              Read More <i class="fas fa-arrow-rotate-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assests/images/10.jpeg" alt="Project Image">
+          <div class="project-content">
+            <h4>Bird Spikes Installation</h4>
+            <p>
+              Keep your surroundings bird-free with sturdy and long-lasting spikes 
+              ideal for windows, ledges, and rooftops.
+            </p>
+            <a href="#" class="read-more-btn">
+              Read More <i class="fas fa-arrow-rotate-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+    .project-card {
+  background: #ffffff;
+  border-radius: 0 0 40px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  padding: 25px;
+  background-color: #f8f9fb;
+  border-radius: 0 0 40px 0;
+}
+
+.project-content h4 {
+  color: #0b0b4f;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 2px solid #0b0b4f;
+  color: #0b0b4f;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn i {
+  transform: rotate(315deg);
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0b0b4f;
+  color: #ffffff;
+}
+
+.read-more-btn:hover i {
+  transform: rotate(360deg);
+}
+
+</style>
+
+<section class="why-choose-us">
+  <div class="section-header">
+    <h2 class="section-title">Why Choose Us</h2>
+    
+  </div>
+
+  <div class="why-grid">
+    <!-- CARD 1 -->
+    <div class="why-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Quality">
+      <h3>Premium Quality</h3>
+      <p>We use ISO-certified nylon nets ensuring durability and lasting performance.</p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="why-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Pricing">
+      <h3>Transparent Pricing</h3>
+      <p>Fixed and fair pricing policy — no hidden charges or surprises.</p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="why-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4221/4221815.png" alt="Timely">
+      <h3>On-Time Delivery</h3>
+      <p>Our team ensures your installation is completed efficiently and on schedule.</p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="why-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/993/993834.png" alt="Warranty">
+      <h3>Long-Term Warranty</h3>
+      <p>Up to 8 years of warranty and maintenance-free service for total peace of mind.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-choose-us {
+    background: #f5f8fa;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #222;
+  }
+
+  .section-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(42,123,155,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+    margin: 15px auto 0;
+    border-radius: 4px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 35px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .why-card {
+    background: linear-gradient(90deg, rgba(42,123,155,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+    border-radius: 24px;
+    padding: 40px 25px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  .why-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .why-card img {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  .why-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .why-card p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+  }
+
+  /* Responsive Tweaks */
+  @media (max-width: 1024px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-card {
+      padding: 30px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+    .why-card img {
+      width: 65px;
+    }
+  }
+</style>
+
+
+
+<section class="faq-section">
+  <div class="faq-container">
+    <!-- Left: FAQ Content -->
+    <div class="faq-left">
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <p>
+        Find quick answers to common questions about our net installation,
+        maintenance, and warranty policies.
+      </p>
+
+      <div class="faq">
+        <details>
+          <summary>🕊️ How long does pigeon net installation take?</summary>
+          <p>Installation usually takes 1–2 hours for a standard balcony or window area.</p>
+        </details>
+
+        <details>
+          <summary>🛠️ What type of nets do you use?</summary>
+          <p>We use UV-stabilized nylon and HDPE nets that are durable, strong, and bird-safe.</p>
+        </details>
+
+        <details>
+          <summary>💰 Do you provide a warranty?</summary>
+          <p>Yes, all installations come with a 5–8 year warranty depending on the net type.</p>
+        </details>
+
+        <details>
+          <summary>🧹 How do I clean or maintain the nets?</summary>
+          <p>The nets are maintenance-free. Just rinse them occasionally with water.</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="faq-right">
+      <img src="assests/images/v1.png" alt="FAQ Image" />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* FAQ SECTION */
+  .faq-section {
+    background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    padding: 100px 40px;
+  }
+
+  .faq-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .faq-left {
+    flex: 1 1 550px;
+  }
+
+  .faq-left h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .faq-left h2 span {
+    color: #ffdf5b;
+  }
+
+  .faq-left p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+
+  /* FAQ ACCORDION */
+  .faq details {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .faq details[open] {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .faq summary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] summary::after {
+    content: "−";
+    transform: rotate(180deg);
+  }
+
+  .faq p {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    opacity: 0.85;
+  }
+
+  /* RIGHT IMAGE */
+  .faq-right {
+    flex: 1 1 500px;
+    text-align: center;
+  }
+
+  .faq-right img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .faq-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .faq-left,
+    .faq-right {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real stories from people we've helped.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-body">
+                            <i class="fas fa-quote-left text-primary fa-2x mb-3"></i>
+                            <p class="mb-4">“Getting bird netting installed was super easy with Monu Pigeon Net Service. The team was professional, quick, and made sure everything was perfect. Highly recommended for quality service!”</p>
+                        </div>
+                        <div class="testimonial-footer d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/50?img=1" alt="Customer" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Ravi Kumar</h5>
+                                <small class="text-muted">Delhi</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-body">
+                            <i class="fas fa-quote-left text-primary fa-2x mb-3"></i>
+                            <p class="mb-4">“I booked pigeon net installation through Monu Pigeon Net Service, and it was a smooth experience. The team responded quickly and handled everything professionally. Truly hassle-free service!”</p>
+                        </div>
+                        <div class="testimonial-footer d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/50?img=2" alt="Customer" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Priya Sharma</h5>
+                                <small class="text-muted">Surat, Gujrat</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-body">
+                            <i class="fas fa-quote-left text-primary fa-2x mb-3"></i>
+                            <p class="mb-4">“The best part is the variety of netting services they offer. From balcony safety nets to bird protection nets — everything was available in one place. Excellent service and quick installation!”</p>
+                        </div>
+                        <div class="testimonial-footer d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/50?img=3" alt="Customer" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Ankit Dubey</h5>
+                                <small class="text-muted">Lucknow, Uttar Pradesh</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ===== RECENT WORKS (fixed) ===== -->
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+  .recent-works {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    color: #fff;
+  }
+
+  .recent-works h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .recent-works p {
+    color: #d1e7ff;
+    margin-bottom: 24px;
+  }
+
+  .recent-works .swiper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 30px;
+  }
+
+  .recent-works .swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Make images and videos same height and cover */
+  .recent-works .swiper-slide img,
+  .recent-works .swiper-slide video {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* smaller height on mobile */
+  @media (max-width: 768px) {
+    .recent-works .swiper-slide img,
+    .recent-works .swiper-slide video {
+      height: 200px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+  }
+
+  .swiper-pagination-bullet {
+    background: rgba(255,255,255,0.8) !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: #FFD700 !important;
+  }
+</style>
+
+<section class="recent-works">
+  <h2>Our Recent Works</h2>
+  <p>Explore some of our latest net installation and maintenance projects.</p>
+
+  <!-- Swiper container -->
+  <div class="swiper recentSwiper">
+    <div class="swiper-wrapper">
+      <!-- Image Slide 1 -->
+      <div class="swiper-slide">
+        <img src="assests/images/02.webp" alt="Balcony Net Installation">
+      </div>
+
+      <!-- Video Slide 2 -->
+      <div class="swiper-slide">
+        <video autoplay muted loop playsinline>
+          <source src="assests/videos/V1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Image Slide 3 -->
+      <div class="swiper-slide">
+        <img src="assests/images/12.png" alt="Bird Protection Net">
+      </div>
+
+      <!-- Video Slide 4 -->
+      <div class="swiper-slide">
+        <video autoplay muted loop playsinline>
+          <source src="assests/videos/V5.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Image Slide 5 -->
+      <div class="swiper-slide">
+        <img src="assests/images/06.jpeg" alt="Sports Net Installation">
+      </div>
+
+      <!-- Video Slide 6 -->
+      <div class="swiper-slide">
+        <video autoplay muted loop playsinline>
+          <source src="assests/videos/V2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Video Slide 7 -->
+      <div class="swiper-slide">
+        <video autoplay muted loop playsinline>
+          <source src="assests/videos/V3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Pagination + Nav (must be inside swiper container but outside wrapper) -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const recentSwiper = new Swiper(".recentSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 18,
+    loop: true,
+    centeredSlides: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1, spaceBetween: 10 },
+      640: { slidesPerView: 1.25, spaceBetween: 12 },
+      768: { slidesPerView: 2, spaceBetween: 14 },
+      1024: { slidesPerView: 3, spaceBetween: 18 }
+    }
+  });
+</script>
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6265358663" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-grid">
+              <!-- Brand/Intro -->
+              <div class="footer-section">
+                <div class="flex align-items-center gap-1rem mb-1.5rem">
+                    <div class="logo"></div>
+                
+  <img src="assests/images/logo.png" alt="Company Logo" style="height: 150px; width: auto;">
+  <br>
+                  <span class="fs-1.5rem fw-bold" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Monu Net Service</span>
+                </div>
+                <p>Monu Pigeon Net Service is a trusted name in bird control and safety solutions in Surat. With years of expertise, we specialize in providing high-quality, durable, and customized netting and grill solutions to protect your home, office.</p>
+                <div class="social-links">
+                  <a href="https://wa.me/6265358663" class="social-link" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="social-link" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="social-link" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="mailto:support@smartsevajn.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+              <!-- Popular Services -->
+              <div class="footer-section">
+                <h3>Popular Services</h3>
+                <ul class="footer-links">
+  <li><a href="#"><i class="fas fa-dove" style="font-size: 0.8rem;"></i> Bird Net Solution</a></li>
+  <li><a href="#"><i class="fas fa-eye-slash" style="font-size: 0.8rem;"></i> Invisible Net</a></li>
+  <li><a href="#"><i class="fas fa-feather-pointed" style="font-size: 0.8rem;"></i> Bird Spike</a></li>
+  <li><a href="#"><i class="fas fa-bug" style="font-size: 0.8rem;"></i> Pest Control</a></li>
+</ul>
+
+              </div>
+              <!-- Service Categories -->
+              <div class="footer-section">
+                <h3>Service Categories</h3>
+               <ul class="footer-links">
+  <li><a href="#"><i class="fas fa-shield-alt" style="font-size: 0.8rem;"></i> Balcony Safety Nets</a></li>
+  <li><a href="#"><i class="fas fa-dove" style="font-size: 0.8rem;"></i> Pigeon Control Nets</a></li>
+  <li><a href="#"><i class="fas fa-wallet" style="font-size: 0.8rem;"></i> Pigeon Nets For Balconies Cost</a></li>
+  <li><a href="#"><i class="fas fa-home" style="font-size: 0.8rem;"></i> Pigeon Nets For Balconies</a></li>
+  <li><a href="#"><i class="fas fa-map-marker-alt" style="font-size: 0.8rem;"></i> Pigeon Nets For Balconies Near Me</a></li>
+  <li><a href="#"><i class="fas fa-window-maximize" style="font-size: 0.8rem;"></i> Pigeon Nets for Windows</a></li>
+  <li><a href="#"><i class="fas fa-rupee-sign" style="font-size: 0.8rem;"></i> Pigeon Nets Installation Charges</a></li>
+  <li><a href="#"><i class="fas fa-location-dot" style="font-size: 0.8rem;"></i> Pigeon Nets Installation Near Me</a></li>
+  <li><a href="#"><i class="fas fa-feather-pointed" style="font-size: 0.8rem;"></i> Anti Bird Nets</a></li>
+  <li><a href="#"><i class="fas fa-map-pin" style="font-size: 0.8rem;"></i> Anti Bird Nets Fixing Near Me</a></li>
+  <li><a href="#"><i class="fas fa-building" style="font-size: 0.8rem;"></i> Anti Bird Nets For Balcony</a></li>
+</ul>
+
+              </div>
+              <!-- Contact & Support -->
+              <div class="footer-section">
+                <h3>Contact & Support</h3>
+                <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                  <div>
+                    <strong>24/7 Helpline</strong><br>
+                    <span><a href="tel:7498204990" style="color: var(--gray-300); text-decoration: none;">+91- 7498204990</a></span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">📧</div>
+                  <div class="contact-icon"><span style="font-size:1.2rem;">📧</span></div>
+                  <div>
+                    <strong>Email Support</strong><br>
+                    <span><a href="mailto:support@monunet.in" style="color: var(--gray-300); text-decoration: none;">support@monunet.in</a></span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon"><span style="font-size:1.2rem;">📍</span></div>
+                  <div>
+                    <strong>Head Office</strong><br>
+                    <span>Surat - ( 394210 ) Gujarat, India</span>
+                  </div>
+                </div>
+                <div class="newsletter">
+                  <h4>Stay Updated</h4>
+                  <p>Get the latest updates on new services and features</p>
+                  <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>
+    © 2025 <strong>Monu Pigeon Net Service</strong>. All Rights Reserved. <br>
+    Best Website Designer, Web Designing, Google Ads, SEO Experts in Bangalore & Social Media Marketing by 
+    <a href="https://www.dataanology.com" target="_blank" rel="noopener noreferrer">DataAnology</a>.
+  </p>
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/whatsapp-button.js"></script>
+
+<!-- Script to handle navbar background on mobile menu toggle -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const offcanvasNavbar = document.getElementById('offcanvasNavbar');
+    const mainNavbar = document.querySelector('.main-navbar');
+
+    if (offcanvasNavbar && mainNavbar) {
+        offcanvasNavbar.addEventListener('show.bs.offcanvas', function () {
+            mainNavbar.classList.add('navbar-solid');
+        });
+
+        offcanvasNavbar.addEventListener('hide.bs.offcanvas', function () {
+            // Only remove the solid class if the user hasn't scrolled down
+            if (window.scrollY < 50) {
+                mainNavbar.classList.remove('navbar-solid');
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

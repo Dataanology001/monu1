@@ -1,0 +1,292 @@
+/* Responsive Styles for All Pages */
+
+/* Base Mobile First Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #00c6a7;
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.3rem !important;
+    padding: 0.5rem 0;
+}
+
+.navbar-toggler {
+    padding: 0.4rem 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 2rem 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Cards */
+.card {
+    margin-bottom: 1.5rem;
+}
+
+/* Forms */
+.form-control {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0 1rem;
+}
+
+.footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Contact Page Specific */
+.contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.contact-info-box,
+.contact-form-card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* Tablet and Larger */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-section {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 4rem 1rem;
+    }
+    
+    .contact-info-box,
+    .contact-form-card {
+        width: 45%;
+        margin-bottom: 0;
+    }
+    
+    /* Improve button layout on tablet */
+    .slide-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .btn-primary-slide,
+    .btn-secondary-slide {
+        max-width: 200px;
+    }
+    
+    /* Adjust hero content for tablet */
+    .hero-content {
+        padding: 2rem;
+    }
+    
+    /* Improve form layout */
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -0.5rem;
+        margin-left: -0.5rem;
+    }
+    
+    .form-row > .col,
+    .form-row > [class*="col-"] {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Improve desktop layout */
+    .hero-section {
+        padding: 6rem 0 4rem;
+    }
+    
+    .content-container {
+        padding: 3rem 2rem;
+    }
+    
+    /* Improve button hover effects */
+    .btn {
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Improve form layout */
+    .form-control {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Hero Slider Responsive Styles */
+@media (max-width: 767px) {
+    .slide-heading .main-title {
+        font-size: 2rem;
+    }
+
+    .slide-heading .sub-title {
+        font-size: 1.2rem;
+    }
+
+    .slide-description {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .slide-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-primary-slide,
+    .btn-secondary-slide {
+        width: 80%;
+        max-width: 280px;
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .slide-features {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .feature-item {
+        font-size: 0.9rem;
+    }
+
+    .slider-indicators button {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Utility Classes */
+.text-center-sm {
+    text-align: center;
+}
+
+.mb-3-sm {
+    margin-bottom: 1rem !important;
+}
+
+/* Hero Slider Fixes */
+.hero-slider-section {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Form Responsive Fixes */
+.form-row {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
