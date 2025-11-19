@@ -514,13 +514,11 @@
         <div class="project-card">
           <img src="assests/images/02.webp" alt="Project Image">
           <div class="project-content">
-            <h4>Chester Road Hostel</h4>
+            <h4>Pigeon Safety Nets</h4>
             <p>
-              Welcome to the project page for the <strong>Chester Road Hostel</strong> project, 
-              which is being built by Morgan Sindall Construction. Here you can read about 
-              the project and its positive effect on the community.
+             Top-quality pigeon net installation for balconies, windows, ducts & shafts in Surat.
             </p>
-            <a href="#" class="read-more-btn">
+            <a href="contact.html" class="read-more-btn">
               Read More <i class="fas fa-arrow-rotate-right"></i>
             </a>
           </div>
@@ -537,7 +535,7 @@
               Professional balcony safety nets that combine durability and aesthetics, 
               ensuring protection for families and pets.
             </p>
-            <a href="#" class="read-more-btn">
+            <a href="contact.html" class="read-more-btn">
               Read More <i class="fas fa-arrow-rotate-right"></i>
             </a>
           </div>
@@ -555,7 +553,7 @@
               Keep your surroundings bird-free with sturdy and long-lasting spikes 
               ideal for windows, ledges, and rooftops.
             </p>
-            <a href="#" class="read-more-btn">
+            <a href="contact.html" class="read-more-btn">
               Read More <i class="fas fa-arrow-rotate-right"></i>
             </a>
           </div>
@@ -566,12 +564,11 @@
         <div class="project-card">
           <img src="assests/images/10.jpeg" alt="Project Image">
           <div class="project-content">
-            <h4>Bird Spikes Installation</h4>
+            <h4>Anti Bird Nets</h4>
             <p>
-              Keep your surroundings bird-free with sturdy and long-lasting spikes 
-              ideal for windows, ledges, and rooftops.
+             Heavy-duty anti-bird nets designed to prevent bird entry into homes & commercial spaces.
             </p>
-            <a href="#" class="read-more-btn">
+            <a href="contact.html" class="read-more-btn">
               Read More <i class="fas fa-arrow-rotate-right"></i>
             </a>
           </div>
@@ -583,12 +580,11 @@
         <div class="project-card">
           <img src="assests/images/10.jpeg" alt="Project Image">
           <div class="project-content">
-            <h4>Bird Spikes Installation</h4>
+            <h4>Cricket Practice Nets</h4>
             <p>
-              Keep your surroundings bird-free with sturdy and long-lasting spikes 
-              ideal for windows, ledges, and rooftops.
+              Strong & weather-resistant cricket nets perfect for homes, academies & grounds.
             </p>
-            <a href="#" class="read-more-btn">
+            <a href="contact.html" class="read-more-btn">
               Read More <i class="fas fa-arrow-rotate-right"></i>
             </a>
           </div>
@@ -600,12 +596,11 @@
         <div class="project-card">
           <img src="assests/images/10.jpeg" alt="Project Image">
           <div class="project-content">
-            <h4>Bird Spikes Installation</h4>
+            <h4>Machhar Jali (Mosquito Mesh)</h4>
             <p>
-              Keep your surroundings bird-free with sturdy and long-lasting spikes 
-              ideal for windows, ledges, and rooftops.
+             Premium-quality mosquito mesh installations for windows and doors.
             </p>
-            <a href="#" class="read-more-btn">
+            <a href="contact.html" class="read-more-btn">
               Read More <i class="fas fa-arrow-rotate-right"></i>
             </a>
           </div>
@@ -681,6 +676,71 @@
   transform: rotate(360deg);
 }
 
+
+    <section id="cta-section" class="cta-section">
+  <div class="cta-content">
+    <h2>Looking for Fast & Professional Installation?</h2>
+    <p>We provide quick service across Surat for balcony nets, pigeon nets, anti-bird nets, invisible grill & more.</p>
+    <a href="tel:+917080527966" class="cta-btn">📞 Call Now – 7080527966</a>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    background: linear-gradient(135deg, #0b0b4f, #1f3d8a);
+    text-align: center;
+    padding: 70px 20px;
+    margin-top: 60px;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .8s ease;
+  }
+
+  .cta-section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cta-content h2 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .cta-content p {
+    color: #e6e6e6;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #0b0b4f;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .3s;
+  }
+
+  .cta-btn:hover {
+    background: #e6e6e6;
+  }
+</style>
+
+<script>
+  // CTA fade-in on scroll
+  const cta = document.getElementById('cta-section');
+
+  window.addEventListener('scroll', () => {
+    const rect = cta.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      cta.classList.add('show');
+    }
+  });
+</script>
 </style>
 
     <!-- WhatsApp Floating Button -->
