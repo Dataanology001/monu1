@@ -430,15 +430,18 @@
 
 
 <section class="appointment-section">
-  <div class="appointment-container">
+  <div class="appointment-box">
     <h2>Get Free Appointment</h2>
-    <form action="https://formsubmit.co/monunetservice@gmail.com" method="POST">
-            <!-- Disable CAPTCHA -->
-    <input type="hidden" name="_captcha" value="false">
-         <!-- Redirect to success.html -->
-    <input type="hidden" name="_next" value="https://dataanology001.github.io/monu1/success.html">
-     <input type="text" name="name" placeholder="Your Name *" required>
+
+    <form action="https://formsubmit.co/monunetservice@gmail.com" method="POST" class="appointment-row">
+
+      <!-- Hidden formsubmit settings -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://dataanology001.github.io/monu1/success.html">
+
+      <input type="text" name="name" placeholder="Your Name *" required>
       <input type="tel" name="phone" placeholder="Your Phone Number *" required>
+
       <select name="service" required>
         <option value="">Select Service *</option>
         <option value="Bird Netting">Bird Netting</option>
@@ -452,73 +455,79 @@
   </div>
 </section>
 
+
 <style>
-  .appointment-section {
-  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+ .appointment-section {
+  background: linear-gradient(90deg, #13a7d8, #001e6c);
   padding: 80px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.appointment-container {
+.appointment-box {
   background: #fff;
   padding: 40px 50px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 28px;
   max-width: 1200px;
   width: 100%;
-  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.appointment-container h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #000851;
+.appointment-box h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #001e6c;
   margin-bottom: 30px;
 }
 
-.appointment-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.appointment-row {
+  display: flex;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.appointment-form input,
-.appointment-form select {
-  padding: 14px 16px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+.appointment-row input,
+.appointment-row select {
+  height: 55px;
+  padding: 0 15px;
   font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  min-width: 250px;
+  outline: none;
   transition: 0.3s ease;
 }
 
-.appointment-form input:focus,
-.appointment-form select:focus {
-  outline: none;
-  border-color: #1CB5E0;
-  box-shadow: 0 0 8px rgba(28, 181, 224, 0.3);
+.appointment-row input:focus,
+.appointment-row select:focus {
+  border-color: #13a7d8;
+  box-shadow: 0 0 6px rgba(19, 167, 216, 0.4);
 }
 
-.appointment-form button {
-  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
-  color: #fff;
+.appointment-row button {
+  height: 55px;
+  padding: 0 35px;
+  background: linear-gradient(90deg, #1bc1e3, #001e6c);
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+  color: #fff;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease;
-  padding: 14px 0;
+  white-space: nowrap;
 }
 
-.appointment-form button:hover {
-  background: linear-gradient(90deg, #000851 0%, #1CB5E0 100%);
+.appointment-row button:hover {
   transform: translateY(-2px);
+  opacity: 0.9;
 }
+
 
 </style>
-
 
 
        <!-- Services Categories -->
