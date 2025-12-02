@@ -432,16 +432,21 @@
 <section class="appointment-section">
   <div class="appointment-container">
     <h2>Get Free Appointment</h2>
-    <form class="appointment-form">
-      <input type="text" placeholder="Your Name *" required>
-      <input type="tel" placeholder="Your Phone Number *" required>
-      <select required>
+    <form action="https://formsubmit.co/monunetservice@gmail.com" method="POST">
+            <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+         <!-- Redirect to success.html -->
+    <input type="hidden" name="_next" value="https://dataanology001.github.io/monu1/success.html">
+     <input type="text" name="name" placeholder="Your Name *" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number *" required>
+      <select name="service" required>
         <option value="">Select Service *</option>
-        <option value="bird-netting">Bird Netting</option>
-        <option value="spike-installation">Bird Spike Installation</option>
-        <option value="balcony-safety">Balcony Safety Net</option>
-        <option value="industrial-netting">Industrial Netting</option>
+        <option value="Bird Netting">Bird Netting</option>
+        <option value="Bird Spike Installation">Bird Spike Installation</option>
+        <option value="Balcony Safety Net">Balcony Safety Net</option>
+        <option value="Industrial Netting">Industrial Netting</option>
       </select>
+
       <button type="submit">Book Appointment</button>
     </form>
   </div>
