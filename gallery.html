@@ -836,6 +836,37 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+        <a href="tel:7498204990" class="floating-call-btn" aria-label="Call Now">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_icon.png" alt="Call">
+</a>
+<style>
+    .floating-call-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+.floating-call-btn img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.floating-call-btn:hover {
+  transform: scale(1.08);
+  transition: 0.2s ease;
+}
+
+</style>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
