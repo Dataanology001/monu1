@@ -750,13 +750,19 @@
     <i class="fas fa-phone"></i>
   </a>
 
+<div class="floating-actions">
+  <!-- Call Button -->
+  <a href="tel:7498204990" class="call-btn" aria-label="Call Now">
+    <i class="fas fa-phone"></i>
+  </a>
+
   <!-- WhatsApp Button -->
   <a href="https://wa.me/7498204990" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 </div>
 <style>
-  .floating-actions {
+    .floating-actions {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -803,7 +809,15 @@
   color: #ffffff;
 }
 
-    </style>
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .floating-actions a {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+</style>
 
 /* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
