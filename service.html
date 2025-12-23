@@ -744,44 +744,75 @@
 </script>
 </style>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/7498204990" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+      <div class="floating-actions">
+  <!-- Call Button -->
+  <a href="tel:7498204990" class="call-btn" aria-label="Call Now">
+    <i class="fas fa-phone"></i>
+  </a>
 
-
-
-          <a href="tel:7498204990" class="floating-call-btn" aria-label="Call Now">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_icon.png" alt="Call">
-</a>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/7498204990" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
 <style>
-    .floating-call-btn {
+  .floating-actions {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* space between buttons */
+  z-index: 9999;
+}
+
+/* COMMON BUTTON STYLE */
+.floating-actions a {
   width: 60px;
   height: 60px;
-  background-color: #25D366; /* WhatsApp green */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-.floating-call-btn img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0) invert(1);
-}
-
-.floating-call-btn:hover {
+.floating-actions a:hover {
   transform: scale(1.08);
-  transition: 0.2s ease;
 }
 
-</style>
+/* CALL BUTTON */
+.call-btn {
+  background-color: #ffffff;
+}
+
+.call-btn i {
+  font-size: 26px;
+  color: #1e66ff; /* BLUE phone icon */
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+.whatsapp-btn i {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+    </style>
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .floating-actions a {
+    width: 54px;
+    height: 54px;
+  }
+}
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
